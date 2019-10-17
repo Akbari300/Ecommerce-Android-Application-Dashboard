@@ -82,6 +82,11 @@
                     {
                     	include("insert_user.php");
                     }
+                    
+                     else if(isset($_GET['delete_product']))
+                    {
+                    	include("delete_product.php");
+                    }
                 	
                 ?>
                 

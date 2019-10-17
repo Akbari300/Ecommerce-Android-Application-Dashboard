@@ -24,7 +24,7 @@
 </div><!-- row 1 finish -->
 
 <div class="row"><!-- row 2 begin -->
-    <div class="col-lg-11"><!-- col-lg-12 begin -->
+    <div class="col-lg-12"><!-- col-lg-12 begin -->
         <div class="panel panel-default"><!-- panel panel-default begin -->
             <div class="panel-heading"><!-- panel-heading begin -->
                <h3 class="panel-title"><!-- panel-title begin -->

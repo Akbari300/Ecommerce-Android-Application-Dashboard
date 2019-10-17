@@ -40,28 +40,53 @@
                         
                         <thead><!-- thead begin -->
                             <tr><!-- tr begin -->
-                                <th> Product ID: </th>
-                                <th> Product Title: </th>
-                                <th> Product Image: </th>
-                                <th> Product Price: </th>
-                                <th> Product Sold: </th>
-                                <th> Product Keywords: </th>
-                                <th> Product Date: </th>
-                                <th> Product Delete: </th>
-                                <th> Product Edit: </th>
+                                <th> ID: </th>
+                                <th>  Name: </th>
+                                <th>  Image: </th>
+                                <th>  Price: &nbsp;</th>
+                                <th>  Description: </th>
+                                <th>  Date: </th>
+                                <th>  Delete:&nbsp;</th>
+                                <th>  Edit: &nbsp; </th>
                             </tr><!-- tr finish -->
                         </thead><!-- thead finish -->
                         
                         <tbody><!-- tbody begin -->
                             
+                             <?php 
+          
+                                $i=0;
+                            
+                                $get_pro = "select * from pending_products";
+                                
+                                $run_pro = mysqli_query($con,$get_pro);
+          
+                                while($row_pro=mysqli_fetch_array($run_pro)){
+                                    
+                                    $pro_id = $row_pro['id'];
+                                    
+                                    $pro_name = $row_pro['pro_name'];
+                                    
+                                    $pro_img = $row_pro['pro_image'];
+                                    
+                                    $pro_price = $row_pro['pro_price'];
+                                    
+                                    $pro_desc = $row_pro['pro_desc'];
+                                    
+                                    $pro_date = $row_pro['pro_date'];
+                                    
+                                    $i++;
+                            
+                            ?>
+                            
+                            
                             <tr><!-- tr begin -->
-                                <td>  </td>
-                                <td>  </td>
-                                <td> </td>
-                                <td>  </td>
-                                <td>  </td>
-                                <td>  </td>
-                                <td></td>
+                                <td><?php echo $pro_id; ?></td>
+                                <td><?php echo $pro_name; ?></td>
+                                <td><img src="images/products/<?php echo $pro_img; ?>" width="60" height="60"></td>
+                                <td>$ <?php echo $pro_price; ?></td>
+                                <td><?php echo $pro_desc; ?></td>
+                                <td><?php echo $pro_date; ?></td>
                                 <td> 
                                      
                                      <a href="index.php?delete_product=<?php echo $pro_id; ?>">
@@ -73,7 +98,7 @@
                                 </td>
                                 <td> 
                                      
-                                     <a href="index.php?edit_product=<?php echo $pro_id; ?>">
+                                     <a href="">
                                      
                                         <i class="fa fa-pencil"></i> Edit
                                     
@@ -82,7 +107,7 @@
                                 </td>
                             </tr><!-- tr finish -->
                             
-                       
+                      	 <?php } ?>
                             
                         </tbody><!-- tbody finish -->
                         
