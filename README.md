@@ -8,7 +8,7 @@ email:  akbarialiahmad@gmail.com
 
 <b>Note:</b>
 - code is avialable as opensource for learning use. 
-- feel free to contact for business purpose ( passpoard and login). 
+- feel free to contact for business purpose ( password and login). 
 - database hasn't been included. 
 - follow the standard copywrite (fork).
 
